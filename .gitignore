@@ -1,0 +1,66 @@
+# ── PHP / Composer ────────────────────────────────────────────────────────────
+/vendor/
+composer.phar
+
+# Κράτα το composer.lock στο repo (είναι app, όχι library):
+# !composer.lock
+
+# ── Environment & μυστικά ─────────────────────────────────────────────────────
+# Το .env περιέχει DB credentials, API keys κλπ — ΠΟΤΕ στο git
+.env
+.env.local
+.env.*.local
+
+# Firebase service account JSON — περιέχει private key admin SDK
+serviceAccountKey.json
+*serviceAccount*.json
+firebase-adminsdk-*.json
+
+# ── User uploads ──────────────────────────────────────────────────────────────
+# Οι φωτογραφίες παικτών / λογότυπα ομάδων δεν πάνε στο git.
+# Κρατάμε τη δομή φακέλων με .gitkeep αρχεία.
+/uploads/*
+!/uploads/.gitkeep
+!/uploads/players/
+!/uploads/teams/
+/uploads/players/*
+/uploads/teams/*
+!/uploads/players/.gitkeep
+!/uploads/teams/.gitkeep
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+error_log
+
+# ── OS files ──────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── Editors / IDEs ────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.history/
+
+# ── PHPStorm specifics ────────────────────────────────────────────────────────
+.phpstorm.meta.php
+_ide_helper.php
+
+# ── PHPUnit / testing ─────────────────────────────────────────────────────────
+.phpunit.result.cache
+/coverage/
+
+# ── Temp / cache ──────────────────────────────────────────────────────────────
+/tmp/
+/cache/
+*.cache
